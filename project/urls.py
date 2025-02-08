@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("lista/", views.lista, name='lista'),
+    path("", include('homepage.urls')),
 ]
