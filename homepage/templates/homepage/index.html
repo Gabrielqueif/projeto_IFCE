@@ -1,14 +1,25 @@
-{% load static %}<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>página inicial</title>
+    <title>calculadora de obras</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
+
 <body>
-    <h1>
-        projeto de obras
-    </h1>  
-    
+    <header><h1>
+        TITULO
+    </h1></header>
+    <section class="menu">
+    <a href="http://127.0.0.1:8000/inicio"><h2>inicio</h2></a>
+    <a href="http://127.0.0.1:8000/memorial"><h2>memorial de calculo</h2></a>
+    <a href="http://127.0.0.1:8000/calculadora"><h2>calculadora</h2></a>
+    </section>
+
 </body>
+
 </html>
