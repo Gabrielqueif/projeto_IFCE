@@ -14,7 +14,7 @@ conection = pymysql.connect(
     password='123456',
     database='projeto_ifce',
 )
-table_name = 'insumos'
+table_name = 'homepage_insumos'
 
 with conection:
     with conection.cursor() as cursor:
@@ -22,12 +22,12 @@ with conection:
         cursor.execute(
             f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                classificação TEXT NOT NULL,
-                Codigo_do_insumo INTEGER NOT NULL,
-                descrição_do_insumo LONGTEXT NOT NULL,
+                classificação LONGTEXT NOT NULL,
+                codigo_insumo INTEGER NOT NULL,
+                descrição_insumo LONGTEXT NOT NULL,
                 Unidade TEXT,
-                Origem_de_Preço TEXT,  -- Nome ajustado para evitar espaços
-                PRIMARY KEY (Codigo_do_insumo)
+                Origem_Preço TEXT,  -- Nome ajustado para evitar espaços 
+                PRIMARY KEY (codigo_insumo)
             )
             '''
         )
@@ -51,7 +51,7 @@ with conection:
 
         sql = (
             f'INSERT INTO {table_name} '
-            '(classificação, Codigo_do_insumo, descrição_do_insumo, Unidade, Origem_de_Preço) '
+            '(classificação, codigo_insumo, descrição_insumo, Unidade, Origem_Preço,) '
             'VALUES (%s, %s, %s, %s, %s)'
         )
         # faço a execução do comando sql com os dados que são gerados

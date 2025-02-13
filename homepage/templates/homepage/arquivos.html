@@ -1,0 +1,35 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Arquivos</title>
+    <link rel="stylesheet" href="{% static 'arquivos.css' %}">
+</head>
+<body>
+    <header>
+        <a href="http://127.0.0.1:8000">inicio</a>
+        <h1>Lista de Arquivos</h1>
+    </header>
+    <section class = "lista">
+        <table class = "tabela" border = "1">
+            <tr>
+                <th>classificação</th>
+                <th>código insumo</th>
+                <th>descrição insumo</th>
+                <th>unidade</th>
+                <th>origem preço</th>
+            </tr>
+            {% for arquivo in arquivos %}
+            <tr>
+                <td>{{ arquivo.classificação }}</td>
+                <td>{{ arquivo.codigo_insumo }}</td>
+                <td>{{ arquivo.descrição_insumo }}</td>
+                <td>{{ arquivo.unidade }}</td>
+                <td>{{ arquivo.origem_preço }}</td>
+            </tr>
+            {% endfor %}
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<ul class="arquivos">
+    {% for arquivo in arquivos %}<li class = "classificação">{{ arquivo.classificação }} </li>{% endfor %}
+    {% for arquivo in arquivos %}<li class = "codigo">{{ arquivo.codigo_insumo }}</li>{% endfor %}
+    {% for arquivo in arquivos %}<li class = "descrição">{{ arquivo.descrição_insumo }}</li>{% endfor %}
+    {% for arquivo in arquivos %}<li class = "unidade">{{ arquivo.unidade }}</li>{% endfor %}
+    {% for arquivo in arquivos %}<li class = "origem">{{ arquivo.origem_preço }}</li>{% endfor %}
+    </ul>
