@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from .models import insumos
+from .models import insumos, estados, tabela
+from rest_framework import viewsets
+from ..api.serializers import insumosSerializer, estadosSerializer, tabelaSerializer
+
+
 
 
 def inicio(request):
