@@ -27,10 +27,10 @@ def calculadora(request):
     )
 
 
-def listar_arquivos(request):
-    arquivos = insumos.objects.all()
-    print(arquivos)  # Adicione esta linha para depuração
-    for arquivo in arquivos:
-        print(arquivo.classificação, arquivo.codigo_insumo, arquivo.descrição_insumo,
-              arquivo.unidade, arquivo.origem_preço)  # Adicione esta linha para depuração
-    return render(request, 'homepage/arquivos.html', {'arquivos': arquivos})
+#def listar_arquivos(request):
+#    arquivos = insumos.objects.all()
+#    print(arquivos)  # Adicione esta linha para depuração
+#    for arquivo in arquivos:
+#        print(arquivo.classificação, arquivo.codigo_insumo, arquivo.descrição_insumo,
+#              arquivo.unidade, arquivo.origem_preço)  # Adicione esta linha para depuração
+#    return render(request, 'homepage/arquivos.html', {'arquivos': arquivos})
