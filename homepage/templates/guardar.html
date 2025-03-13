@@ -1,7 +1,23 @@
-<ul class="arquivos">
-    {% for arquivo in arquivos %}<li class = "classificação">{{ arquivo.classificação }} </li>{% endfor %}
-    {% for arquivo in arquivos %}<li class = "codigo">{{ arquivo.codigo_insumo }}</li>{% endfor %}
-    {% for arquivo in arquivos %}<li class = "descrição">{{ arquivo.descrição_insumo }}</li>{% endfor %}
-    {% for arquivo in arquivos %}<li class = "unidade">{{ arquivo.unidade }}</li>{% endfor %}
-    {% for arquivo in arquivos %}<li class = "origem">{{ arquivo.origem_preço }}</li>{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="arquivos">
+      {% for arquivo in arquivos %}
+      <li class="classificação">{{ arquivo.classificação }}</li>
+      {% endfor %} {% for arquivo in arquivos %}
+      <li class="codigo">{{ arquivo.codigo_insumo }}</li>
+      {% endfor %} {% for arquivo in arquivos %}
+      <li class="descrição">{{ arquivo.descrição_insumo }}</li>
+      {% endfor %} {% for arquivo in arquivos %}
+      <li class="unidade">{{ arquivo.unidade }}</li>
+      {% endfor %} {% for arquivo in arquivos %}
+      <li class="origem">{{ arquivo.origem_preço }}</li>
+      {% endfor %}
     </ul>
+  </body>
+</html>
