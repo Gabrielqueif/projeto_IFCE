@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..homepage.models import insumos, estados, tabela
+from .models import insumos, estados, tabela
 
 class insumosSerializer(serializers.ModelSerializer):
     class Meta:
